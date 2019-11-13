@@ -24,7 +24,7 @@ module AmCharts
     # Load the Amcharts helper when loading ActionView
     initializer 'amcharts.action_controller' do |app|
       ActiveSupport.on_load :action_controller do
-        helper AmCharts::AmChartsHelper
+        ::ActionController::Base.helper AmCharts::AmChartsHelper
       end
     end
   end if defined?(Rails)
